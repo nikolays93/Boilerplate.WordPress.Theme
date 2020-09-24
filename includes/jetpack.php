@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package _s
+ * @package Boilerplate.WordPress.Theme
  */
 
 /**
@@ -13,14 +13,15 @@
  * See: https://jetpack.com/support/infinite-scroll/
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
+ * @uses _boilerplate_infinite_scroll_render()
  */
-function _s_jetpack_setup() {
+add_action( 'after_setup_theme', function () {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => '_s_infinite_scroll_render',
+			'render'    => '_boilerplate_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -47,13 +48,12 @@ function _s_jetpack_setup() {
 			),
 		)
 	);
-}
-add_action( 'after_setup_theme', '_s_jetpack_setup' );
+} );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function _s_infinite_scroll_render() {
+function _boilerplate_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :
