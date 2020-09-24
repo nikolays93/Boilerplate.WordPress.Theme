@@ -12,6 +12,10 @@ if ( ! defined( 'BOILERPLATE_VERSION' ) ) {
 	define( 'BOILERPLATE_VERSION', '0.0.1' );
 }
 
+if ( ! defined( 'TPL' ) ) {
+    define( 'TPL', trailingslashit( get_template_directory_uri() ) );
+}
+
 if ( 'require_template_file' ) :
 	/**
 	 * Get boilerplate theme path in directory
