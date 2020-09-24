@@ -45,15 +45,30 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
+		<nav id="site-navigation" class="main-navigation navbar navbar-expand-md" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#default-collapse" aria-controls="default-collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<a class="navbar-brand" href="/"><?php the_custom_logo(); ?></a>
+
+				<?php
+				wp_nav_menu( array(
+					'theme_location'    => 'menu-1',
+					'depth'             => 2,
+					'container'         => 'div',
+					'container_id'      => 'default-collapse',
+					'container_class'   => 'collapse navbar-collapse navbar-responsive-collapse',
+					'menu_class'        => 'nav navbar-nav',
+					'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+					'walker'            => new WP_Bootstrap_Navwalker(),
+				) );
+				?>
+			</div>
+		</nav>
+
+		<nav >
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

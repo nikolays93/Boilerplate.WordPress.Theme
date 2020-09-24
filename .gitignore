@@ -18,6 +18,7 @@ _config.yml
 !/vendor/assets/
 /vendor/assets/*
 !/vendor/assets/_source/
+!/vendor/wp-bootstrap/
 
 /assets/*
 !/assets/_source/

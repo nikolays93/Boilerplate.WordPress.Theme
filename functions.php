@@ -26,6 +26,8 @@ if ( 'require_template_file' ) :
 endif;
 
 array_map('require_template_file', array(
+	// Bootstrap 4 Navigation Walker. WP_Bootstrap_Navwalker class.
+	'/vendor/wp-bootstrap/wp-bootstrap-navwalker/class-wp-bootstrap-navwalker.php',
 	// Setup theme supports.
 	'/includes/setup.php',
 	// Register widgets.
