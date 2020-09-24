@@ -48,8 +48,8 @@
 		<nav id="site-navigation" class="main-navigation navbar navbar-expand-md" role="navigation">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#default-collapse" aria-controls="default-collapse" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
+				<button class="navbar-toggler hamburger hamburger--elastic" type="button" data-toggle="collapse" data-target="#default-collapse" aria-controls="default-collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="hamburger-box"><span class="hamburger-inner"></span></span>
 				</button>
 
 				<a class="navbar-brand" href="/"><?php the_custom_logo(); ?></a>
