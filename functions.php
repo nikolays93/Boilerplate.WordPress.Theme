@@ -16,7 +16,7 @@ if ( ! defined( 'TPL' ) ) {
     define( 'TPL', trailingslashit( get_template_directory_uri() ) );
 }
 
-if ( 'require_template_file' ) :
+if ( ! function_exists( 'require_template_file' ) ) :
 	/**
 	 * Get boilerplate theme path in directory
 	 */
