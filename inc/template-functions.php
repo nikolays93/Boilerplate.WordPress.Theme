@@ -35,3 +35,17 @@ function _s_pingback_header() {
 	}
 }
 add_action( 'wp_head', '_s_pingback_header' );
+
+/**
+ * Add container to page class
+ *
+ * @param string[] $classes An array of page class names.
+ * @param string[] $class   An array of additional class names added to the page.
+ * @return string[] Array of class names.
+ */
+function _s_built_in_page_class( $classes, $class ) {
+	array_push( $classes, 'container' );
+
+	return $classes;
+}
+add_filter( 'page_class', '_s_built_in_page_class', 10, 2 );

@@ -163,3 +163,49 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+if ( ! function_exists( 'get_page_class' ) ) :
+	/**
+	 * Retrieves an array of the class names for the page element.
+	 *
+	 * @param string|string[] $class Space-separated string or array of class names to add to the class list.
+	 * @return string[] Array of class names.
+	 */
+	function get_page_class( $class = '' ) {
+		// Pass site class for save classses structure.
+		$classes = array( 'site' );
+
+		if ( $class ) {
+			if ( ! is_array( $class ) ) {
+				$class = preg_split( '#\s+#', $class );
+			}
+		} else {
+			// Ensure that we always coerce class to being an array.
+			$class = array();
+		}
+
+		$classes = array_map( 'esc_attr', array_merge( $classes, $class ) );
+
+		/**
+		 * Filters the list of CSS page class names for the current post or page.
+		 *
+		 * @param string[] $classes An array of page class names.
+		 * @param string[] $class   An array of additional class names added to the page.
+		 */
+		$classes = apply_filters( 'page_class', $classes, $class );
+
+		return array_unique( $classes );
+	}
+endif;
+
+if ( ! function_exists( 'page_class' ) ) :
+	/**
+	 * Displays the class names for the page element.
+	 *
+	 * @param string|string[] $class Space-separated string or array of class names to add to the class list.
+	 */
+	function page_class( $class = '' ) {
+		// Separates class names with a single space, collates class names for page element.
+		echo 'class="' . esc_attr( join( ' ', get_page_class( $class ) ) ) . '"';
+	}
+endif;
