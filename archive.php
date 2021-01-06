@@ -1,10 +1,10 @@
 <?php
 /**
- * The template for displaying archive pages
+ * Это страница архива предварительного просмотра записей
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package _s
+ * @package _rus
  */
 
 get_header();

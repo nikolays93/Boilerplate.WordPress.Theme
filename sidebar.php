@@ -1,10 +1,13 @@
 <?php
 /**
- * The sidebar containing the main widget area
+ * Второстепенный столбец
+ *
+ * Вызывается командой get_sidebar()
+ * Как правило, он используется для добавления бокового столбца
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package _s
+ * @package _rus
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
