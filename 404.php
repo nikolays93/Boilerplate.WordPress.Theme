@@ -1,10 +1,12 @@
 <?php
 /**
- * The template for displaying 404 pages (not found)
+ * Файл ошибки 404 темы WordPress
+ *
+ * Этот файл используется когда запрашиваемая страница не найдена
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package _s
+ * @package _rus
  */
 
 get_header();

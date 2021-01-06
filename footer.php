@@ -1,12 +1,12 @@
 <?php
 /**
- * The template for displaying the footer
+ * Этот шаблон нижней части (подвала) сайта
  *
- * Contains the closing of the #content div and all content after.
+ * Он включает в себя закрывающий слой #content и заканчивает страницу.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package _s
+ * @package _rus
  */
 
 ?>

@@ -1,12 +1,12 @@
 <?php
 /**
- * The header for our theme
+ * Шаблон шапки для сайта
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * Этот шаблон отображает начало сайта до контента включая тэг <head>
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package _s
+ * @package _rus
  */
 
 ?>
