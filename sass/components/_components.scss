@@ -1,5 +1,27 @@
+//
+// Components
+// --------------------------
+
+// @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+@import "bootstrap/scss/input-group";
+// @import "bootstrap/scss/custom-forms";
+
+/* Animations
+--------------------------------------------- */
+// @import "vendor/animate";
+
+/* Icons
+--------------------------------------------- */
+// @import "vendor/font-awesome";
+
 /* Navigation
 --------------------------------------------- */
+
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/pagination";
+// @import "vendor/hamburgers";
 @import "navigation/navigation";
 
 /* Posts and pages
@@ -17,6 +39,13 @@
 /* Media
 --------------------------------------------- */
 @import "media/media";
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/jumbotron";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+@import "bootstrap/scss/media";
 
 /* Captions
 --------------------------------------------- */
@@ -25,3 +54,14 @@
 /* Galleries
 --------------------------------------------- */
 @import "media/galleries";
+
+/* Sliders
+--------------------------------------------- */
+// @import "vendor/slick";
+
+// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+// @import "bootstrap/scss/modal";
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";

@@ -1,5 +1,22 @@
+//
+// Abstracts
+// --------------------------
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
 @import "variables/colors";
+@import "variables/options";
+@import "variables/spacing";
+@import "variables/links";
+@import "variables/grid";
+@import "variables/components";
 @import "variables/typography";
-@import "variables/structure";
-@import "variables/columns";
-@import "mixins/mixins";
+@import "variables/s";
+
+@import "mixins/smart-grid";
+@import "mixins/functions";
+@import "mixins/responsive";
+@import "mixins/images";
+@import "mixins/s";

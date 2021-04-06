@@ -1,0 +1,42 @@
+// Base elements.
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+// Allow only vertical resizing of textareas.
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+.flex-container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    @each $breakpoint, $container-max-width in $container-max-widths {
+        @include from(map-get($grid-breakpoints, $breakpoint)) {
+            max-width: $container-max-width;
+        }
+    }
+}
